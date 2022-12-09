@@ -8,24 +8,19 @@
 
 32679 -> 6 */
 
-using static MyLibrary;
 
 
 
-int[] array = { 1, 2 };
+Console.Write("\nВведите натуральное число : "); 
+int N = Convert.ToInt32(Console.ReadLine());
 
-PrintArray(array);
-
-Console.WriteLine();
-
-int size = array.Length;
-
-if (size >= 3)
-{
-    Console.WriteLine(array[2]);
+if (N >= 100) {
+    Console.WriteLine($"Третья цифра числа {N} = {N /100}");
 }
-else Console.WriteLine("Третьей цифры нет!!");
-
+else 
+{
+    Console.WriteLine($"Третьей цифры в числе {N} нет\n");
+}
 
 
 
