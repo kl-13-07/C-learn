@@ -46,19 +46,20 @@ int size;
 int count = 0;
 size = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine();
+Console.WriteLine(("_____________________________________________________________"));
 
 
 int[] array = CreateArray(size);
 
 FillArrayManual(array, size);
+Console.WriteLine("_____________________________________________________________");
 
 
 PrintArray(array);
 
 for (int i = 0; i < array.Length; i++)
 {
-    if (((byte)array[i] ) > 0)
+    if (array[i]  > 0)
     {
         count++;
 
