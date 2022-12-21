@@ -1,4 +1,7 @@
-﻿/* Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
+﻿using static MyLibrary;
+
+
+/* Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
 
 0, 7, 8, -2, -2 -> 2
 
@@ -7,7 +10,7 @@
 
 
 
-int count = 0;
+/* int count = 0;
 int number;
 
 
@@ -33,8 +36,40 @@ while (true)
     else break;
 
 }
+ */
 
 
+
+
+Console.WriteLine("Введите длину массива");
+int size;
+int count = 0;
+size = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine();
+
+
+int[] array = CreateArray(size);
+
+FillArrayManual(array, size);
+
+
+PrintArray(array);
+
+for (int i = 0; i < array.Length; i++)
+{
+    if (((byte)array[i] ) > 0)
+    {
+        count++;
+
+    }
+
+   
+
+
+}
+
+ Console.WriteLine($" в Ваше массиве {count} чисел больше чем '0' ");
 
 
 
