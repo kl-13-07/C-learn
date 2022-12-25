@@ -14,23 +14,49 @@
 17 -> такого числа в массиве нет */
 
 
-int[,] matrix = new int [2, 5];
+int[,] matrix = new int[2, 5];
 FillArrayX2(matrix, 1, 10);
 
-PrintArrayX2 (matrix);
+PrintArrayX2(matrix);
 
 Console.WriteLine("__________________________________________");
 
 Console.WriteLine("\nЗадайте позицию строки, искомого элемента");
 
-        int number1 = Convert.ToInt32(Console.ReadLine());
+int number1 = Convert.ToInt32(Console.ReadLine());
 
-        Console.WriteLine("\nЗадайте позицию столбца, искомого элемента");
 
-        int number2 = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine(matrix[number1, number2]);
+Console.WriteLine();
 
-//Console.WriteLine($"{matrix [number1, number2]}");
 
-//($" в Ваше массиве {count} чисел больше чем '0' ");
+if (number1 > matrix.GetLength(0) - 1)
+{
+    Console.WriteLine("заданной позиции строки не существует");
+
+}
+
+else
+{
+    Console.WriteLine("\nЗадайте позицию столбца, искомого элемента");
+
+    int number2 = Convert.ToInt32(Console.ReadLine());
+
+    Console.WriteLine();
+
+    if (number2 > matrix.GetLength(1) - 1)
+    {
+        Console.WriteLine("заданной позиции столбца не существует");
+    }
+    else
+    {
+        Console.WriteLine(matrix[number1, number2]);
+
+    }
+}
+
+
+
+
+
+
