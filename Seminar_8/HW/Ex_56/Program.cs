@@ -19,10 +19,7 @@
 
 
 int[,] matrix1 = new int[3, 4];
-
 FillArrayX2(matrix1, 1, 10);
-
-
 int[] Sum1 = CreateArray(matrix1.GetLength(0));
 int minindex1 = 0;
 int min1 = 0;
@@ -38,25 +35,14 @@ static void Sumstringx2(int[,] matrix, int[] Sum, int min, int minindex)
     for (int i = 0; i < matrix.GetLength(0); i++)
 
     {
-
-
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
             Sum[i] += matrix[i, j];
-
-
-
-
-
-
-
 
         }
     }
 
 }
-
-
 
 Sumstringx2(matrix1, Sum1, min1, minindex1);
 
